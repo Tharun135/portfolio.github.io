@@ -1,18 +1,18 @@
 /* Tharun Sebastian – Technical Writer Portfolio
    Semantic, lightweight CSS – accessible, readable, print-friendly */
 :root {
-  --bg-start: #b2d7fe;
-  --bg-end: #e6f3ff;
-  --panel: #ffffff;
-  --text: #2c3e50;
-  --muted: #6b7c93;
-  --link: #4a90e2;
-  --accent: #5b9bd5;
-  --border: #cce5ff;
-  --code: #f8f9fa;
-  --maxw: 1100px;
-  --radius: 12px;
-  --shadow: 0 2px 12px rgba(74, 144, 226, 0.2);
+  --bg-start: #FAFAFA;             /* Light gray/white background */
+  --bg-end: #FFFFFF;
+  --panel: #FFFFFF;
+  --text: #212121;                 /* Dark gray for body text */
+  --muted: #888888;
+  --link: #421A98;                 /* Balu's accent blue/purple for links */
+  --accent: #2A3B97;               /* Headings, main accents: strong deep blue */
+  --border: #E0E0E0;               /* Light muted for borders, separators */
+  --code: #F8F9FA;
+  --maxw: 700px;                   /* Narrower layout for cleaner look */
+  --radius: 10px;
+  --shadow: 0 2px 8px #E0E0E0;
 }
 /* Base */
 * { box-sizing: border-box; }
@@ -20,6 +20,83 @@ html {
   scroll-behavior: smooth;
   background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-start) 90%, var(--bg-end) 100%);
   min-height: 100vh;
+}
+html, body {
+  background: var(--bg-start);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 40px auto;
+  padding: 32px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+header, section {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+h1 {
+  font-size: 2.3em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 1.5em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: 1.1em;
+  color: var(--accent);
+  margin-top: 1rem;
+}
+a {
+  color: var(--link);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+.profile-links {
+  margin-bottom: 2rem;
+  font-size: 1.1em;
+}
+.profile-links a {
+  margin-right: 16px;
+  color: var(--link);
+}
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95em;
+  margin-top: 32px;
+}
+@media print {
+  body { background: white; }
+  header, section { box-shadow: none; border: 1px solid #ddd; }
+  a { color: var(--text); text-decoration: underline; }
+  button, .btn { display: none; }
 }
 body {
   margin: 0;

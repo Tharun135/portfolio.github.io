@@ -1,300 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tharun Sebastian - Senior Technical Writer specializing in cloud documentation, API docs, and docs-as-code workflows" />
+  <meta charset="UTF-8">
   <title>Tharun Sebastian | Senior Technical Writer</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Lightweight interactivity and structure (no frameworks) */
-    :root{
-      --bg:#0e0f13;--panel:#14161c;--text:#eef1f7;--muted:#a9b0bd;--brand:#5aa6ff;--accent:#9bffd0;--line:#232734;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{color:#beddff}
-    img{max-width:100%;display:block}
-    .container{width:min(1100px,92%);margin-inline:auto}
-
-    /* Header */
-    header{position:sticky;top:0;background:rgba(14,15,19,.8);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--line);z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
-    .brand{display:flex;align-items:center;gap:.8rem}
-    .brand .avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));opacity:.85}
-    .brand h1{font-size:1.05rem;margin:0}
-    .tag{font-size:.82rem;color:var(--muted)}
-    .nav-links{display:flex;gap:1rem}
-    .nav-links a{padding:.45rem .75rem;border-radius:.5rem;transition:background .2s,color .2s}
-    .nav-links a:hover{background:var(--panel)}
-
-    /* Sections */
-    section{padding:72px 0;border-bottom:1px solid var(--line)}
-    h2.section-title{font-size:1.6rem;margin:0 0 .75rem}
-    p.lead{color:var(--muted);max-width:72ch}
-
-    /* Hero */
-    #hero{padding:96px 0 72px;background:radial-gradient(1200px 500px at 10% -10%, #1c2140 0%, transparent 60%)}
-    .hero-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
-    .hero-title{font-size:2rem;margin:0 0 .4rem}
-    .hero-cta{display:flex;gap:.75rem;margin-top:1rem}
-    .btn{display:inline-block;padding:.7rem 1rem;border:1px solid var(--line);border-radius:.6rem;background:var(--panel);color:var(--text)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),#6cc1ff);border:none;color:#0b1220}
-    .btn:hover{transform:translateY(-1px)}
-
-    /* Chips, cards, accordions */
-    .chips{display:flex;flex-wrap:wrap;gap:.5rem}
-    .chip{padding:.3rem .6rem;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:#0f121a}
-
-    .grid{display:grid;gap:1rem}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-
-    .card{border:1px solid var(--line);background:var(--panel);border-radius:.8rem;padding:1rem;transition:transform .15s, border-color .15s}
-    .card:hover{transform:translateY(-2px);border-color:#2b3150}
-
-    details{border:1px solid var(--line);border-radius:.7rem;background:var(--panel);padding:.7rem 1rem}
-    details+details{margin-top:.75rem}
-    summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.6rem}
-    summary::before{content:"▸";transition:transform .2s;color:var(--muted)}
-    details[open] summary::before{transform:rotate(90deg)}
-
-    /* Footer */
-    footer{padding:32px 0;color:var(--muted)}
-
-    /* Responsive */
-    @media (max-width: 800px){
-      .hero-wrap{grid-template-columns:1fr}
-      .grid.cols-2{grid-template-columns:1fr}
-      .grid.cols-3{grid-template-columns:1fr}
-      .nav-links{display:none}
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="avatar" aria-hidden="true"></div>
-        <div>
-          <h1>Tharun Sebastian</h1>
-          <div class="tag">Senior Technical Writer • Cloud • APIs • Docs-as-code</div>
-        </div>
-      </div>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
   <main>
-    <!-- Hero -->
-    <section id="hero">
-      <div class="container hero-wrap">
-        <div>
-          <h2 class="hero-title">I build scalable, developer‑friendly documentation.</h2>
-          <p class="lead">Technical writer blending engineering and communication. Focused on AI‑assisted authoring, docs‑as‑code, and automated pipelines that keep content accurate, consistent, and production‑ready.</p>
-          <div class="hero-cta">
-            <a class="btn primary" href="#contact">Work with me</a>
-            <a class="btn" href="https://www.linkedin.com/in/tharun-sebastian/" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-          <div class="chips" style="margin-top:.9rem">
-            <span class="chip">API & SDK Docs</span>
-            <span class="chip">Cloud & Automation</span>
-            <span class="chip">CI/CD for Docs</span>
-            <span class="chip">AI Content Quality</span>
-          </div>
-        </div>
-        <div>
-          <div class="card" aria-label="Profile photo placeholder" style="aspect-ratio:1/1;display:grid;place-items:center">
-            <span style="color:var(--muted)">Profile Photo</span>
-          </div>
-          <div class="card" style="margin-top:1rem">
-            <strong>Based in</strong><br/>Bangalore, India<br/>
-            <strong>Email</strong><br/><a href="mailto:tharun135@gmail.com">tharun135@gmail.com</a><br/>
-            <strong>Phone</strong><br/><a href="tel:+919633568468">+91 9633568468</a>
-          </div>
-        </div>
+    <header>
+      <h1>Tharun Sebastian</h1>
+      <div class="subtitle">Senior Technical Writer • Cloud • APIs • Docs-as-code</div>
+      <p>Building smart, scalable, developer-centric documentation. Expertise in cloud platforms, automation, and technical authoring with AI and docs-as-code workflows.</p>
+      <div class="profile-links">
+        <a href="mailto:tharun135@gmail.com">Email</a> |
+        <a href="https://linkedin.com/in/tharun-sebastian">LinkedIn</a> |
+        <a href="https://github.com/Tharun135">GitHub</a>
       </div>
+    </header>
+    <section>
+      <h2>About</h2>
+      <p>
+        Senior technical writer with 8+ years of experience in software and cloud documentation. Passionate about bridging the gap between engineering and users through clear, actionable technical content. Strong interest in automation, AI-powered workflows, and making documentation scalable for global teams.
+      </p>
+      <blockquote>
+        “My job as a technical writer is not to blindly follow specs, but to collaborate, ask deep questions, and deliver documentation that empowers users and inspires product teams.”
+      </blockquote>
     </section>
-
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="lead">I build documentation that’s as smart and reliable as the software it supports. With a B.Tech in Aeronautical Engineering and experience across industrial automation, cloud, and medical software, I craft clear, actionable content for developers and product teams.</p>
-      </div>
+    <section>
+      <h2>Professional Experience</h2>
+      <h3>Senior Technical Writer – Siemens</h3>
+      <p>Cloud, automation, API/SDK docs, innovation projects, AI-assisted authoring</p>
+      <h3>Technical Writer – LT Technology Services</h3>
+      <p>Medical devices, Agile product teams</p>
+      <h3>Technical Writer – Thoughtfocus</h3>
+      <p>Client solutions, e-learning, training docs</p>
+      <h3>Technical Illustrator & Author – Cades Studec</h3>
+      <p>Aerospace manuals, S1000D/ATA 100 compliance</p>
     </section>
-
-    <!-- Experience -->
-    <section id="experience">
-      <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="grid cols-2">
-          <article class="card">
-            <h3>Senior Technical Writer — Siemens Technology and Services</h3>
-            <div class="chip">Nov 2022 – Present</div>
-            <ul>
-              <li>Develop and maintain user guides, API/SDK docs, and release notes for cloud and automation platforms.</li>
-              <li>Apply AI‑assisted authoring and custom Flask/NLP tools for scalable content generation.</li>
-              <li>Define developer‑focused content strategies with PMs, engineers, and UX.</li>
-              <li>Build CI/CD doc pipelines enabling validation, packaging, and deployment to Fluid Topics.</li>
-              <li>Contribute to innovation projects: chatbots, AI‑driven content analysis, interactive docs.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Technical Writer — LT Technology Services</h3>
-            <div class="chip">Jul 2019 – Oct 2022</div>
-            <ul>
-              <li>Produced manuals, installation guides, release notes, and maintenance content for medical devices and software.</li>
-              <li>Partnered with SMEs to ensure accuracy, compliance, and consistency.</li>
-              <li>Managed reviews, validations, and labeling design reviews within Agile teams.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Technical Writer — Thoughtfocus Technology</h3>
-            <div class="chip">Nov 2018 – Jun 2019</div>
-            <ul>
-              <li>Delivered technical documentation in PDF and web help formats for client solutions.</li>
-              <li>Created training presentations on documentation standards and processes.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Technical Illustrator & Author — Cades Studec Technologies</h3>
-            <div class="chip">Jul 2015 – Oct 2018</div>
-            <ul>
-              <li>Authored/illustrated aerospace maintenance manuals and IPCs.</li>
-              <li>Ensured compliance with S1000D, ATA 100, and ASD‑STE100.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
+    <section>
+      <h2>Skills</h2>
+      <p>
+        Documentation strategy, REST APIs, user guides, SDK docs, CI/CD pipelines, Oxygen XML, Fluid Topics, AI/NLP, Flask, Python, Markdown, Atlassian, VS Code, Adobe Illustrator <strong>+</strong> 60 more in technical authoring and tools
+      </p>
     </section>
-
-    <!-- Skills (collapsible) -->
-    <section id="skills">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="grid cols-2">
-          <details open>
-            <summary>Documentation</summary>
-            <div class="chips" style="margin-top:.6rem">
-              <span class="chip">User manuals</span>
-              <span class="chip">REST API docs</span>
-              <span class="chip">Release notes</span>
-              <span class="chip">SDK docs</span>
-            </div>
-          </details>
-          <details open>
-            <summary>Authoring Tools</summary>
-            <div class="chips" style="margin-top:.6rem">
-              <span class="chip">VS Code</span>
-              <span class="chip">Oxygen XML</span>
-              <span class="chip">Fluid Topics</span>
-              <span class="chip">Adobe Illustrator</span>
-            </div>
-          </details>
-          <details>
-            <summary>Languages & Formats</summary>
-            <div class="chips" style="margin-top:.6rem">
-              <span class="chip">Markdown</span>
-              <span class="chip">XML</span>
-              <span class="chip">DITA</span>
-              <span class="chip">YAML</span>
-              <span class="chip">JSON</span>
-            </div>
-          </details>
-          <details>
-            <summary>Methods & Concepts</summary>
-            <div class="chips" style="margin-top:.6rem">
-              <span class="chip">Agile</span>
-              <span class="chip">Scrum</span>
-              <span class="chip">DDLC</span>
-              <span class="chip">SDLC</span>
-              <span class="chip">DevOps basics</span>
-              <span class="chip">NLP</span>
-              <span class="chip">Python scripting</span>
-              <span class="chip">CI/CD for docs</span>
-            </div>
-          </details>
-        </div>
-      </div>
+    <section>
+      <h2>Education</h2>
+      <h3>B.Tech in Aeronautical Engineering</h3>
+      <p>University of Calicut</p>
     </section>
-
-    <!-- Education -->
-    <section id="education">
-      <div class="container">
-        <h2 class="section-title">Education</h2>
-        <article class="card">
-          <strong>B.Tech in Aeronautical Engineering</strong><br/>
-          Jawaharlal College of Engineering and Technology, Calicut University, Kerala — Graduated Aug 2012
-        </article>
-      </div>
+    <section>
+      <h2>Certifications &amp; Licenses</h2>
+      <ul>
+        <li>API Technical Writing: JSON &amp; XML</li>
+        <li>Docs-as-code Workflow Automation</li>
+        <li>Cloud Documentation Fundamentals</li>
+        <li>+ 14 more in technical writing, documentation, and automation tools</li>
+      </ul>
     </section>
-
-    <!-- Certifications -->
-    <section id="certifications">
-      <div class="container">
-        <h2 class="section-title">Certifications</h2>
-        <p class="lead">Selected certifications and trainings can be listed here. Add specific titles, issuers, and dates as you prefer.</p>
-      </div>
+    <section>
+      <h2>Let's Connect</h2>
+      <p>
+        Always open to collaborating with engineers, product managers, and fellow technical writers. Connect with me on <a href="https://linkedin.com/in/tharun-sebastian">LinkedIn</a> or <a href="mailto:tharun135@gmail.com">email</a>!
+      </p>
     </section>
-
-    <!-- Projects (collapsible cards) -->
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <details open class="card">
-          <summary><strong>Doc Scanner App</strong> — AI‑powered document review</summary>
-          <p>Flask, spaCy, readability metrics, and retrieval‑augmented AI enforce consistent style and clarity across docs.</p>
-          <div class="chips">
-            <span class="chip">Flask</span><span class="chip">spaCy</span><span class="chip">NLP</span><span class="chip">RAG</span>
-          </div>
-        </details>
-        <details class="card">
-          <summary><strong>DevOps Pipeline Automation</strong> — Docs CI/CD</summary>
-          <p>End‑to‑end pipelines to build, lint, validate, and deploy technical docs to Fluid Topics with quality gates.</p>
-          <div class="chips">
-            <span class="chip">CI/CD</span><span class="chip">DevOps</span><span class="chip">Automation</span><span class="chip">Fluid Topics</span>
-          </div>
-        </details>
-        <details class="card">
-          <summary><strong>AI‑Assisted Authoring Tools</strong> — Content generation</summary>
-          <p>Custom Flask/NLP utilities for prompt engineering and automated content generation in docs workflows.</p>
-          <div class="chips">
-            <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">AI</span><span class="chip">Prompt engineering</span>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="grid cols-2">
-          <article class="card">
-            <strong>Email</strong><br/>
-            <a href="mailto:tharun135@gmail.com">tharun135@gmail.com</a>
-            <br/><br/>
-            <strong>Phone</strong><br/>
-            <a href="tel:+919633568468">+91 9633568468</a>
-          </article>
-          <article class="card">
-            <strong>LinkedIn</strong><br/>
-            <a href="https://www.linkedin.com/in/tharun-sebastian/" target="_blank" rel="noopener">linkedin.com/in/tharun-sebastian</a>
-            <br/><br/>
-            <strong>Location</strong><br/>
-            Bangalore, India
-          </article>
-        </div>
-      </div>
-    </section>
+    <hr>
+    <footer class="footer">
+      &copy; 2025 Tharun Sebastian. All rights reserved.<br>Last updated: October 2025
+    </footer>
+  </main>
+</body>
+</html>
