@@ -1,14 +1,14 @@
 /* Tharun Sebastian – Technical Writer Portfolio
    Semantic, lightweight CSS – accessible, readable, print-friendly */
 :root {
-  --bg: #fcfcfd;
-  --panel: #ffffff;
+  --bg: #fff;
+  --panel: #fff;
   --text: #1a2332;
   --muted: #5a6b7d;
   --link: #0066cc;
   --accent: #0099cc;
-  --border: #ebf3fa;
-  --code: #f5f9fc;
+  --border: #e0e0e0;
+  --code: #f9f9f9;
   --maxw: 1100px;
   --radius: 12px;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -20,7 +20,7 @@ body {
   margin: 0;
   font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
-  background: #fcfcfd;
+  background: #fff;
 }
 img { max-width: 100%; height: auto; border-radius: 10px; }
 .container { max-width: var(--maxw); margin-inline: auto; padding: 0 1rem; }
@@ -29,7 +29,7 @@ section + section { border-top: 1px solid var(--border); }
 /* Header / Nav */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
+  background: #fff;
   backdrop-filter: saturate(120%) blur(8px);
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
@@ -47,8 +47,8 @@ section + section { border-top: 1px solid var(--border); }
 .kicker { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .82rem; }
 .h1 { font-size: clamp(1.9rem, 2.8vw + 1rem, 3rem); line-height: 1.15; margin: .35rem 0 1rem; }
 .lead { color: var(--muted); font-size: 1.05rem; max-width: 60ch; }
-.hero-card { background: #ffffff;
-  border: 1px solid #ebf3fa; border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow);
+.hero-card { background: #fff;
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow);
 }
 .hero-meta { display: grid; gap: .35rem; color: var(--muted); font-size: .95rem; }
 .hero-meta a { color: var(--link); text-decoration: none; }
@@ -58,8 +58,8 @@ section + section { border-top: 1px solid var(--border); }
 .section-desc { color: var(--muted); margin: 0 0 1.75rem; }
 /* Cards & Panels */
 .panel {
-  background: #ffffff;
-  border: 1px solid #ebf3fa;
+  background: #fff;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -75,13 +75,13 @@ section + section { border-top: 1px solid var(--border); }
 .role ul { margin: .5rem 0 0 1rem; }
 /* Skills */
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .8rem; }
-.skill { padding: .9rem 1rem; border: 1px solid #ebf3fa; border-radius: 10px; background: #ffffff; }
+.skill { padding: .9rem 1rem; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
 .skill h4 { margin: 0 0 .25rem; font-size: 1rem; color: #000; }
 .skill p { margin: 0; color: var(--muted); }
 /* Projects */
 .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
 .project { overflow: hidden; }
-.project .thumb { aspect-ratio: 16/9; background: #e8f2fc; display: grid; place-items: center; color: var(--muted); }
+.project .thumb { aspect-ratio: 16/9; background: #f0f0f0; display: grid; place-items: center; color: var(--muted); }
 .project .body { padding: 1rem 1.1rem; }
 .project h3 { margin: 0 0 .35rem; font-size: 1.05rem; }
 .project p { margin: 0; color: var(--muted); }
@@ -123,7 +123,7 @@ a:hover { text-decoration: underline; }
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
 }
 @media print {
-  :root { --bg: #fff; --text: #111; --muted: #333; --panel: #f7f8fb; --border: #e6e8f0; }
+  :root { --bg: #fff; --text: #111; --muted: #333; --panel: #fff; --border: #e6e8f0; }
   body { background: #fff; color: #111; }
   .site-header { position: static; background: #fff; border-bottom: 1px solid #e6e8f0; }
   .panel { box-shadow: none; background: #fff; border: 1px solid #e6e8f0; }
